@@ -10,6 +10,8 @@ fileprivate let logger: Logger = Logger(subsystem: "TestSkip", category: "TestSk
     public var items: [Item] = loadItems() {
         didSet { saveItems() }
     }
+    
+    let user = User(imageName: "user-img", name: "S. M. Sajid Hasan Shanta", designation: "iOS Developer", bio: "Check out my blogs at\nhttps://blog.sajidhasan.com")
 
     public init() {
     }

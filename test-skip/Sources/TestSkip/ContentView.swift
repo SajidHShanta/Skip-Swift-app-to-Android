@@ -8,21 +8,15 @@ public struct ContentView: View {
     @AppStorage("tab") var tab = ContentTab.welcome
     @State var viewModel = ViewModel()
     @State var appearance = ""
-    @State var isBeating = false
 
     public init() {
+        
     }
 
     public var body: some View {
         TabView(selection: $tab) {
-            VStack(spacing: 0) {
-                Text("Hello [\(viewModel.name)](https://skip.tools)!")
-                    .padding()
-                Image(systemName: "heart.fill")
-                    .foregroundStyle(.red)
-                    .scaleEffect(isBeating ? 1.5 : 1.0)
-                    .animation(.easeInOut(duration: 1).repeatForever(), value: isBeating)
-                    .onAppear { isBeating = true }
+            VStack {
+                UserCardView(user: viewModel.user)
             }
             .font(.largeTitle)
             .tabItem { Label("Welcome", systemImage: "heart.fill") }
@@ -135,3 +129,13 @@ struct ItemView : View {
         }
     }
 }
+
+//            VStack(spacing: 0) {
+//                Text("Hello [\(viewModel.name)](https://skip.tools)!")
+//                    .padding()
+//                Image(systemName: "heart.fill")
+//                    .foregroundStyle(.red)
+//                    .scaleEffect(isBeating ? 1.5 : 1.0)
+//                    .animation(.easeInOut(duration: 1).repeatForever(), value: isBeating)
+//                    .onAppear { isBeating = true }
+//            }

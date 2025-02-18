@@ -1,6 +1,8 @@
 # Skip.tools Exploration
 This repository explores [Skip.tools](https://skip.tools/), which enables Swift developers to create native iOS and Android apps using a single codebase.
 
+[You can also check out my blog for a step-by-step guide: https://blog.sajidhasan.com](https://blog.sajidhasan.com/ios-and-android-apps-with-swift-using-skip-step-by-step-guide)
+
 ## What is Skip?
 Skip brings Swift app development to Android by allowing developers to:
 - Create Swift code that runs natively on both iOS and Android using Xcode, maintaining a unified codebase for a consistent experience.  
